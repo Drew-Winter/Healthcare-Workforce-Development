@@ -1,0 +1,32 @@
+
+/*
+This query returns the selected columns to identify participant data for the program
+as identified by program code and service code. This information is analyzed both in
+the MWA Conference Tool csv, the Participant Summary python code, and the Power BI
+dashboards in the Healthcare-Workforce-Development repository on my github.
+/*
+Select --NOTE: the details of this code have been modified for public disclosure
+par.ID, -- key field for each participant
+par.sex_ID AS SEX, -- demographic columns containing 'Y', 'N', or no string.
+par.age_at_registration AS Age,
+par.disability_cd AS Disabled,
+par.VETERAN_STATUS_CD AS Veteran,
+par.LOW_INCOME_IND AS Low_Income,
+par.ethnic_hispanic_or_latino_ind AS Hispanic,
+par.ethnic_african_american_ind AS Black,
+par.ethnic_asian_ind AS Asian,
+par.ethnic_am_indian_alas_nat_ind AS Alaskan_Indian,
+par.ETHNIC_NAT_HI_OR_PAC_ISL_IND AS Pacific_Islander,
+par.ethnic_white_ind AS White,
+par.RACE_DID_NOT_SELF_IDENTIFY_IND AS DID_NOT_SAY,
+par.apprent_status AS Apprentice, -- participation in a related program.
+    par.MWA_ID as MWA_ID, -- Organization that recruited and supported participant
+    par.reg_date AS Reg_Date, -- date that participant registered with organization and began participation
+s.career_code -- code identifying type of career training for participant
+
+
+FROM
+    Participants PAR, SERVICES S -- table join
+ where PAR.program_code = 'HWD' -- identify program code
+And par.id = s.individual_id
+And s.service_code = '2' -- identify service code that shows type of service provided to participant
