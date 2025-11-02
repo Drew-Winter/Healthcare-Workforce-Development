@@ -1,3 +1,3 @@
 These documents are tools used to create, maintain, and analyze a statewide healthcare workforce development program. They are chiefly used by stakeholders to track progress for participants (aka jobseekers to be trained), and spending. Policy design, genuine program data, program monitoring guide, and closeout materials include confidential information and are thus not listed here. 
 
-I have included three separate README files explaining the major tools: the Power BI dashboard (SQL and Power BI), the Performance and Spending Tracking tool (Excel), and the Participant Data Summary (Python).
+I have included three separate README files explaining the major tools: the Power BI dashboard (SQL and Power BI), the Performance and Spending Tracking tool (Excel), and the Participant Data Summary (Python). Each file contains sections on Executive Summary, Background, Methods, and Outcomes.
